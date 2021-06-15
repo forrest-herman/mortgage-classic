@@ -30,28 +30,241 @@
 
         <style>
             :root {
+                --nav_height: 100px;
+                --nav_logo_max_size: 200px;
                 --nav_text_color: black;
                 --nav_text_color_hover: #a3dae0;
-                --nav_text_size: 1.5rem;
+                --nav_bgcolor: white;
+                --nav_text_size: 1.4rem;
 
                 --color1: #a3dae0;
                 --color2: #ff7e7e;
-                --bgcolor: white;
+                --bgcolor: #ffff69;
 
                 --default_font_color: black;
-                --default_font: "Abhaya Libre", sans-serif;
+                --default_font: "", sans-serif;
                 --header_font_weight: 800;
 
-                --root_font_size: 20px;
+                --root_font_size: 15px;
 
                 --hero_height: calc(100vh - 40px);
                 --base_box_padding: 6rem;
 
-                --loader_bg: url(../img/loader.gif) center no-repeat #fff;
+                /* --loader_bg: url(../img/loader.gif) center no-repeat #fff; */
 
                 --default_transition_duration: 0.3s;
             }
         </style>
     </head>
-    <body></body>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="# ">
+                    <img src="img/jasmineLogo.svg" alt="logo" class="logo" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fal fa-bars"></i>
+                </button>
+
+                <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item nav-button">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- Hero section -->
+        <section id="hero" style="background-image: url(img/neonbrand-kdwahpWYfQo-unsplash.jpg)">
+            <div class="container container-sm">
+                <div class="row hero">
+                    <div class="col-12 d-flex justify-content-start align-items-center">
+                        <div class="hero-title text-left">
+                            <h1>Your <br />Title <br />Here</h1>
+                            <!-- <h3 class="hero-subtitle">Your Name</h3> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Hero section -->
+
+        <section id="about" class="section-margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-title">
+                        <h2>Section Title</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-title">
+                        <h2>Section Title 2</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-title">
+                        <h2>Section Title 3</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="section-margin-top section-v-padding bg-color-1">
+            <div class="container footer">
+                <div class="row justify-content-center align-items-start">
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto ms-sm-0">
+                            <!-- <img class="footer-logo" src="img/jasmineLogo.svg" style="max-width: 200px" /> -->
+                            <h5>Company Logo</h5>
+                            <p>
+                                Mortgage Broker <br />
+                                License # 123456
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto">
+                            <h5>Address</h5>
+                            <p>Sudbury, ON</p>
+                            <div>
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.pinterest.ca/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto">
+                            <h5>Quick Links</h5>
+                            <ul class="footer-menu">
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#">Home</a>
+                                </li>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#about">About</a>
+                                </li>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#testimonials">Testimonials</a>
+                                </li>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row justify-content-center text-center">
+                    <div class="col col-12 footer-copyright">
+                        <p>
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            Your Name, Mortgage Agent. All Rights Reserved.
+                            <br />
+                            Mortgage Website created by
+                            <a href="https://atomicgrowth.co" target="_blank"> Atomic Growth</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- main.js -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
