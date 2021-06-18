@@ -318,7 +318,7 @@ a:hover {
     text-decoration: none;
 }
 
-a:hover * {
+a:not(.btn):hover * {
     color: var(--color2);
 }
 
@@ -407,6 +407,76 @@ a.btn:focus {
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .half-text-block-container {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Blockquote Testimonial */
+
+.bubble blockquote,
+.bubble > p,
+.bubble > div {
+    position: relative;
+    border: none;
+}
+
+blockquote > p {
+    font-style: italic;
+}
+
+.bubble blockquote:before,
+.bubble blockquote:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f10d";
+    position: absolute;
+    /* font-size: 3rem; */
+    line-height: 1;
+}
+.bubble blockquote:before {
+    top: -20px;
+    left: -20px;
+}
+.bubble blockquote:after {
+    content: "\f10e";
+    bottom: -20px;
+    right: -20px;
+}
+.carousel-inner {
+    padding: 30px;
+}
+
+.carousel.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.carousel-indicators {
+    /* top: 110%; */
+    position: relative;
+    margin: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--default_font_color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: var(--color1);
 }
 
 /* Footer */
