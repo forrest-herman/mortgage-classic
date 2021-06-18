@@ -434,7 +434,7 @@ blockquote > p {
 .bubble blockquote:after {
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    content: "\f10d";
+    /* content: "\f10d"; */
     position: absolute;
     /* font-size: 3rem; */
     line-height: 1;
@@ -444,12 +444,18 @@ blockquote > p {
     left: -20px;
 }
 .bubble blockquote:after {
-    content: "\f10e";
+    /* content: "\f10e"; */
     bottom: -20px;
     right: -20px;
 }
+
+.carousel {
+    position: initial;
+}
+
 .carousel-inner {
-    padding: 30px;
+    padding: 0 5px;
+    margin: auto;
 }
 
 .carousel.slide {
@@ -460,8 +466,8 @@ blockquote > p {
 }
 
 .carousel-indicators {
-    /* top: 110%; */
     position: relative;
+    bottom: 0px;
     margin: 0;
 }
 
