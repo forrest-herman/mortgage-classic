@@ -88,16 +88,6 @@ p {
     font-size: max(1.25rem, 14px);
 }
 
-a {
-    /* color: var(--color2); */
-    text-decoration: underline;
-}
-
-a:hover {
-    color: var(--color2);
-    cursor: pointer !important;
-}
-
 .text-color1 {
     color: var(--color1);
 }
@@ -317,6 +307,21 @@ section#hero {
 
 /* Buttons */
 
+a {
+    /* color: var(--color2); */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color2);
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+a:hover * {
+    color: var(--color2);
+}
+
 a.btn {
     background-color: var(--color1);
     color: white;
@@ -451,6 +456,9 @@ ul.footer-menu {
     margin: initial;
 }
 ul.footer-menu > li a {
+    text-decoration: underline;
+}
+ul.footer-menu > li a:hover {
     text-decoration: none;
 }
 
