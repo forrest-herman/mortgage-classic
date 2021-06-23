@@ -26,9 +26,9 @@ h4,
 h5,
 h6,
 p,
+cite,
 a,
-input.form-control,
-input.btn-form,
+input.btn,
 textarea.form-control {
     font-family: var(--default_font);
     color: var(--default_font_color);
@@ -52,18 +52,22 @@ h3,
 h4,
 h5,
 h6,
-input.form-control,
-input.btn-form,
-textarea.form-control {
+input.btn {
     font-weight: var(--header_font_weight);
+}
+
+.form-control {
+    font-weight: var(--md_font_weight);
 }
 
 body,
 section,
 div,
 ul,
+nav,
 li,
-a {
+a,
+a:hover {
     transition-duration: var(--default_transition_duration);
 }
 
@@ -84,7 +88,13 @@ h5,
     font-size: 1.4rem;
 } */
 
-p {
+input.btn {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+p,
+cite {
     font-size: max(1.25rem, 14px);
 }
 
@@ -207,6 +217,11 @@ section {
     margin-bottom: 1rem;
 }
 
+.testimonials .section-title h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
 /*  End of Section  */
 
 /* -------- Navbar -------- */
@@ -216,10 +231,15 @@ section {
     width: 100%;
     top: 0;
     padding: 0;
+    transition-property: height;
     background-color: var(--nav_bgcolor);
     height: var(--nav_height);
     max-height: var(--nav_height);
     z-index: 100;
+}
+
+.navbar.shrink {
+    height: calc(var(--nav_height) - 2rem);
 }
 
 .navbar .container {
@@ -234,11 +254,19 @@ section {
 
 a.nav-link {
     color: var(--nav_text_color);
-    /* text-transform: uppercase; */
     font-size: var(--nav_text_size);
+    transition-property: font-size, background-color;
+    transition-duration: var(--default_transition_duration);
 }
 
-a.nav-link:hover {
+#navbar.shrink a.nav-link {
+    transition-duration: var(--default_transition_duration);
+    font-size: calc(var(--nav_text_size) - 0.1rem);
+}
+
+.nav-link:focus,
+.nav-link.active,
+.nav-link:hover {
     color: var(--nav_text_color_hover);
 }
 
@@ -285,7 +313,7 @@ section#hero {
     background-repeat: no-repeat;
 }
 
-.hero > div {
+#hero .hero > div {
     height: calc(100vh - var(--nav_height));
 }
 
@@ -322,55 +350,59 @@ a:not(.btn):hover * {
     color: var(--color2);
 }
 
+input.btn,
 a.btn {
     background-color: var(--color1);
-    color: white;
     padding: 1.5rem;
     border-radius: 2.5rem;
 }
-a.btn.btn-color-2 {
+.btn.btn-color-2 {
     background-color: var(--color2);
 }
-a.btn:hover,
+.btn:hover,
 .nav-button > a.nav-link:hover {
     background-color: var(--color2);
 }
-a.btn.btn-color-2:hover,
+.btn.btn-color-2:hover,
 .nav-button.btn-color-2 > a.nav-link:hover {
     background-color: var(--color1);
 }
-a.btn.btn-sm {
+.btn.btn-sm {
     padding: 0.8rem;
     border-radius: 2rem;
 }
-a.btn.btn-lg {
+.btn.btn-lg {
     padding-left: 2.8rem;
     padding-right: 2.8rem;
     border-radius: 2.5rem;
 }
+.btn.btn-wide {
+    padding: 0.8rem 1.2rem;
+}
 
-.bg-color-1 a.btn:hover {
+.bg-color-1 .btn:hover {
     background-color: var(--bg_1_font_color);
 }
-.bg-color-1 a.btn:hover > * {
+.bg-color-1 .btn:hover > *,
+.bg-color-1 input.btn:hover {
     color: var(--color1);
 }
 
-.bg-color-2 a.btn:hover {
+.bg-color-2 .btn:hover {
     background-color: var(--bg_2_font_color);
 }
-.bg-color-2 a.btn:hover > * {
+.bg-color-2 .btn:hover > *,
+.bg-color-2 input.btn:hover {
     color: var(--color2);
 }
 
-a.btn:focus {
+.btn:focus {
     box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 /* Cards */
 
 .card {
-    background-color: white;
     border: none;
     border-radius: 2rem;
     padding: 2rem;
@@ -388,8 +420,18 @@ a.btn:focus {
     padding: 0rem;
 }
 
+.card.equal-height {
+    height: 100%;
+}
+
 .card-body {
     padding: 0;
+}
+
+.card.equal-height .card-body {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-body > *:first-child {
@@ -453,9 +495,14 @@ blockquote > p {
     position: initial;
 }
 
+.carousel .bubble {
+    transition-property: all;
+    transition-duration: var(--default_transition_duration);
+}
+
 .carousel-inner {
     padding: 0 5px;
-    margin: auto;
+    margin: 0.5rem 0 auto 0;
 }
 
 .carousel.slide {
@@ -483,6 +530,58 @@ blockquote > p {
 
 .carousel-indicators [data-bs-target].active {
     background-color: var(--color1);
+}
+
+/* Form */
+
+.form-control {
+    box-shadow: none;
+    background: var(--bgcolor);
+    border: 2px solid var(--default_font_color);
+    border-radius: 12px;
+}
+.form-control.no-outline {
+    border-color: rgba(0, 0, 0, 0);
+}
+.form-control:active,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--color2);
+}
+
+.form-group:not(:first-child) {
+    margin-top: 15px;
+}
+.form-group:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.form-control.resize-none {
+    resize: none;
+}
+
+/* Testimonials  */
+
+.testimonials .card i {
+    background-color: var(--color1);
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin: -4rem auto 0 auto;
+}
+
+.card-body.blockquote {
+    margin: 0;
+}
+
+.blockquote-footer {
+    margin-top: 0;
+}
+
+.blockquote-footer cite {
+    font-style: normal;
 }
 
 /* Footer */

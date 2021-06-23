@@ -47,12 +47,14 @@
                 --bg_2_font_color: black;
                 --default_font: "Lato", sans-serif;
                 --header_font_weight: 800;
+                --md_font_weight: 600;
 
                 --root_font_size: 18px;
 
                 --hero_height: calc(100vh - 40px);
                 --base_box_padding: 6rem;
 
+                --default_transition_duration_long: 0.6s;
                 --default_transition_duration: 0.3s;
                 --default_transition_duration_short: 0.1s;
             }
@@ -60,10 +62,10 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
+        <nav id="navbar" class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="# ">
-                    <img src="img/jasmineLogo.svg" alt="logo" class="logo" />
+                    <img id="logo" src="img/jasmineLogo.svg" alt="logo" class="logo" />
                 </a>
                 <button
                     class="navbar-toggler"
@@ -80,13 +82,13 @@
                 <div class="collapse justify-content-end navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#about">About</a>
+                            <a class="nav-link" aria-current="page" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                            <a class="nav-link" href="testimonials.html">Testimonials</a>
                         </li>
                         <li class="nav-item nav-button btn-color-2">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -187,32 +189,12 @@
             <div class="container-lg container-fluid">
                 <div class="row">
                     <div class="col section-title">
-                        <h2>Section Title 2</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
-                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
-                        </p>
-                    </div>
-                    <div class="col">
-                        <p>
-                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
-                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
-                        </p>
-                    </div>
-                    <div class="col">
-                        <p>
-                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
-                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
-                        </p>
+                        <h2>Serving You, every step of the way</h2>
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-12 col-sm">
-                        <div class="card">
+                        <div class="card equal-height">
                             <div class="card-icon">
                                 <h2><i class="far fa-calculator"></i></h2>
                             </div>
@@ -224,7 +206,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm">
-                        <div class="card">
+                        <div class="card equal-height">
                             <div class="card-icon">
                                 <h2><i class="far fa-lock"></i></h2>
                             </div>
@@ -236,7 +218,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm">
-                        <div class="card">
+                        <div class="card equal-height">
                             <div class="card-icon">
                                 <h2><i class="far fa-hands-helping"></i></h2>
                             </div>
@@ -265,7 +247,7 @@
             </div>
         </section>
 
-        <section class="bg-color-1">
+        <section id="img-text-split-right" class="bg-color-1">
             <div class="container-fluid">
                 <div class="row d-flex align-items-center">
                     <div class="col-md-6 section-title h-padding-large-md v-padding-large col-bg-image" style="background-image: url(img/christian-koch-D_4R9CcYZOk-unsplash.jpg)">
@@ -310,10 +292,33 @@
             </div>
         </section>
 
+        <section id="img-text-split-left" class="bg-color-1">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6 section-title half-text-block-container h-padding-large-md v-padding-large height-fit-content">
+                        <h2 class="text-start">
+                            Don't wait. <br />
+                            Start saving!
+                        </h2>
+                        <p>Once I have determined your mortgage needs, I will find you the best mortgage options at the best rate possible.</p>
+                        <a class="btn btn-color-2 btn-sm mt-3" href="#"><h5>Learn more</h5></a>
+                    </div>
+                    <div class="col-md-6 section-title h-padding-large-md v-padding-large col-bg-image" style="background-image: url(img/christian-koch-D_4R9CcYZOk-unsplash.jpg)">
+                        <h2 class="text-start hidden">
+                            Don't wait. <br />
+                            Start saving!
+                        </h2>
+                        <p class="hidden">Once I have determined your mortgage needs, I will find you the best mortgage options at the best rate possible.</p>
+                        <a class="btn btn-sm mt-3 hidden" href="#"><h5>Learn more</h5></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="testimonials" class="v-padding-large">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 section-title v-padding-large">
+                    <div class="col-md-6 section-title pb-5">
                         <h2 class="text-start">What clients are saying</h2>
                         <a class="btn btn-sm mt-3" href="#"><h5>Read all testimonials</h5></a>
                     </div>
@@ -328,8 +333,7 @@
                                                 explain her complex industry.
                                             </p>
                                         </blockquote>
-
-                                        <p class="cite">Kerrie Lynn Michelutti</p>
+                                        <div class="blockquote-footer"><cite>Kerrie Lynn Michelutti</cite></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -340,8 +344,7 @@
                                                 team, then you are really missing out. I give her 6 out of 5 monopoly houses.
                                             </p>
                                         </blockquote>
-
-                                        <p class="cite">Ken Wilson</p>
+                                        <div class="blockquote-footer"><cite>Ken Wilson</cite></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -349,8 +352,7 @@
                                         <blockquote>
                                             <p>Jasmine is fantastic! She was empathetic and honest and was a key part of helping me find a solution to better my families lifestyle!</p>
                                         </blockquote>
-
-                                        <p class="cite">James Munro</p>
+                                        <div class="blockquote-footer"><cite>James Munro</cite></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -358,8 +360,7 @@
                                         <blockquote>
                                             <p>This lady is a rockstar! I highly recommend her to complete a mortgage and she is super friendly, professional, just amazing</p>
                                         </blockquote>
-                                        <div></div>
-                                        <p class="cite">Jillian Kingsbury</p>
+                                        <div class="blockquote-footer"><cite>Jillian Kingsbury</cite></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -367,8 +368,7 @@
                                         <blockquote>
                                             <p>If you're looking for dedication and warm service this is your only choice!</p>
                                         </blockquote>
-                                        <div></div>
-                                        <p class="cite">Marie Gelinas</p>
+                                        <div class="blockquote-footer"><cite title="Source Title">Marie Gelinas</cite></div>
                                     </div>
                                 </div>
                             </div>
@@ -380,6 +380,168 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="img-form-split-right" class="bg-color-1">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6 section-title h-padding-large-md v-padding-large col-bg-image" style="background-image: url(img/christian-koch-D_4R9CcYZOk-unsplash.jpg)">
+                        <h2 class="text-start hidden">Top 5 ways to get approved for a higher mortgage</h2>
+                        <p class="hidden">Enter your email below and we’ll send you a free pdf!</p>
+                        <div class="row form-group hidden">
+                            <div class="col-12">
+                                <input type="email" id="email" class="form-control no-outline" placeholder="Your email address" required="" />
+                            </div>
+                        </div>
+                        <div class="hidden">
+                            <input type="submit" value="Submit" class="btn btn-color-2 btn-sm mt-3" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-title half-text-block-container h-padding-large-md v-padding-large height-fit-content">
+                        <h2 class="text-start">Top 5 ways to get approved for a higher mortgage</h2>
+                        <p>Enter your email below and we’ll send you a free pdf!</p>
+                        <div class="row form-group">
+                            <div class="col-12">
+                                <input type="email" id="email" class="form-control no-outline" placeholder="Your email address" required="" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <input type="submit" value="Submit" class="btn btn-color-2 btn-sm btn-wide" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-padding-large">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-title">
+                        <h2>Section Title 3</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="img-form-split-left" class="bg-color-1">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6 section-title half-text-block-container h-padding-large-md v-padding-large height-fit-content">
+                        <h2 class="text-start">Get in touch</h2>
+                        <div class="form-connect">
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="full-name">Your Name</label> -->
+                                    <input type="text" id="full-name" class="form-control no-outline" placeholder="Your Name" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="email">Email Address</label> -->
+                                    <input type="email" id="email" class="form-control no-outline" placeholder="email@domain.com" required="" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" name="subject" id="subject" class="form-control no-outline" placeholder="(123) 456-7890" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="message">Your Message</label> -->
+                                    <textarea type="message" id="message" cols="5" rows="3" class="form-control no-outline resize-none" placeholder="Type your message here."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <input type="submit" value="Send Message" class="btn btn-color-2 btn-sm btn-wide" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-title h-padding-large-md v-padding-large col-bg-image" style="background-image: url(img/christian-koch-D_4R9CcYZOk-unsplash.jpg)">
+                        <h2 class="text-start hidden">Get in touch</h2>
+                        <div class="form-connect hidden">
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="full-name">Your Name</label> -->
+                                    <input type="text" id="full-name" class="form-control" placeholder="Your Name" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="email">Email Address</label> -->
+                                    <input type="email" id="email" class="form-control" placeholder="email@domain.com" required="" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-12">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" name="subject" id="subject" class="form-control" placeholder="(123) 456-7890" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <!-- <label for="message">Your Message</label> -->
+                                    <textarea type="message" id="message" cols="5" rows="3" class="form-control resize-none" placeholder="Type your message here."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <input type="submit" value="Send Message" class="btn btn-color-2 btn-sm btn-wide" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v-padding-large">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-title">
+                        <h2>Section Title 3</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
+                        <p>
+                            Section paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam minus consequatur, eligendi id, cum repellendus fugiat officia iusto consequuntur
+                            nesciunt vero cupiditate dolorum ipsam pariatur quisquam quo ad libero?
+                        </p>
                     </div>
                 </div>
             </div>
